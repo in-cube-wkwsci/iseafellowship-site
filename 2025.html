@@ -1320,14 +1320,21 @@
         }
         .highlight-row {
             display: flex;
-            gap: 18px;
-            align-items: flex-start;
+            gap: 24px;
+            align-items: center;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 24px 28px;
         }
-        .highlight-row .hl-icon { font-size: 26px; line-height: 1.3; }
+        .highlight-row .hl-photo {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            flex-shrink: 0;
+            display: block;
+        }
         .highlight-row h4 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
         .highlight-row p { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
         /* quotes band */
@@ -1412,7 +1419,8 @@
         }
         @media (max-width: 768px) {
             .fellows-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-            .highlight-row { flex-direction: column; gap: 8px; }
+            .highlight-row { flex-direction: column; gap: 16px; align-items: stretch; }
+            .highlight-row .hl-photo { width: 100%; height: 200px; }
         }
     </style>
 </head>
@@ -1521,28 +1529,28 @@
         <h2 class="section-title reveal reveal-delay-1">Moments that stood out</h2>
         <div class="highlight-list">
             <div class="highlight-row reveal">
-                <div class="hl-icon">&#127908;</div>
+                <img class="hl-photo" src="images/keynote.jpg" alt="A guest of honour with i-SEA fellows at the opening ceremony">
                 <div>
                     <h4>An opening ceremony with distinguished guests</h4>
                     <p>The in-person week opened at the Wee Kim Wee School with addresses from Senior Parliamentary Secretary Eric Chua and Co-HASS Dean Prof. Jon Wilson, followed by keynotes from Filipino broadcast journalist Atom Araullo and Singapore science creator Kong Man Jing.</p>
                 </div>
             </div>
             <div class="highlight-row reveal">
-                <div class="hl-icon">&#127942;</div>
+                <img class="hl-photo" src="images/presentation.jpg" alt="A team presenting at the i-SEA hackathon finals">
                 <div>
                     <h4>Team CreatorBase wins the hackathon</h4>
                     <p>Six teams pitched solutions to challenges in the creator economy. The winning team, CreatorBase, proposed an educational resource hub to help creators handle sponsorships transparently &mdash; praised by judges for its immediate feasibility and scalability across the region.</p>
                 </div>
             </div>
             <div class="highlight-row reveal">
-                <div class="hl-icon">&#128241;</div>
+                <img class="hl-photo" src="images/tiktok-visit.jpg" alt="i-SEA fellows together during the programme week">
                 <div>
                     <h4>A cohort that kept creating</h4>
                     <p>Fellows' own posts about the programme drew more than 130,000 video views across Instagram and TikTok, and external coverage &mdash; in English, Khmer, and Vietnamese &mdash; ran 94% positive with no negative mentions.</p>
                 </div>
             </div>
             <div class="highlight-row reveal">
-                <div class="hl-icon">&#127758;</div>
+                <img class="hl-photo" src="images/closing.jpg" alt="Fellows at the i-SEA 2025 closing ceremony">
                 <div>
                     <h4>A network that outlasted the programme</h4>
                     <p>Every fellow stayed in touch with at least one other after the programme ended &mdash; many kept posting about i-SEA for months, and one credited the fellowship as a key factor in landing his dream job.</p>
