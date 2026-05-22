@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>i-SEA Fellowship 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>i-SEA Fellowship 2025 &mdash; Programme Recap</title>
+    <meta name="description" content="A recap of the inaugural i-SEA Fellowship 2025: three weeks of online masterclasses, industry visits, a hackathon, and the 40 student content creators who took part.">
     <style>
         @font-face {
             font-family: 'SF Pro Display';
@@ -1279,55 +1279,183 @@
                 text-align: center;
             }
         }
+    
+        /* ---- 2025 recap page additions ---- */
+        .subhero {
+            min-height: auto;
+            padding: 160px 24px 70px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        .back-link:hover { color: var(--text-primary); }
+        .recap-narrative {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 19px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            text-align: center;
+        }
+        .phase-detail { text-align: left; }
+        .phase-detail .tile-meta {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        .highlight-list {
+            max-width: 820px;
+            margin: 40px auto 0;
+            display: grid;
+            gap: 16px;
+        }
+        .highlight-row {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 28px;
+        }
+        .highlight-row .hl-icon { font-size: 26px; line-height: 1.3; }
+        .highlight-row h4 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+        .highlight-row p { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+        /* quotes band */
+        .quotes-band { background: var(--bg-light); padding: 120px 24px; }
+        .quotes-grid {
+            max-width: 1120px;
+            margin: 56px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .quote-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+        }
+        .quote-mark {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 64px;
+            line-height: 0.6;
+            height: 32px;
+            color: var(--text-secondary);
+            opacity: 0.35;
+        }
+        .quote-text {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.5;
+            margin: 12px 0 24px;
+            flex: 1;
+        }
+        .quote-attrib {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+        }
+        /* fellows gallery */
+        .gallery-section { padding: 120px 24px; background: var(--bg-white); }
+        .gallery-container { max-width: 1200px; margin: 0 auto; }
+        .gallery-group { margin-top: 72px; }
+        .gallery-group:first-of-type { margin-top: 56px; }
+        .gallery-group-title {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .gallery-group-sub {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            margin-bottom: 32px;
+        }
+        .fellows-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 22px;
+        }
+        .fellow-card { text-align: center; }
+        .fellow-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+            background: var(--bg-light);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .fellow-card:hover .fellow-photo {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(0,0,0,0.16);
+        }
+        .fellow-name { font-size: 15px; font-weight: 600; margin-top: 14px; }
+        .fellow-country { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+        @media (max-width: 1024px) {
+            .quotes-grid { grid-template-columns: 1fr; }
+            .fellows-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .fellows-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .highlight-row { flex-direction: column; gap: 8px; }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/ntu-incube-logo-dark.png" alt="NTU Centre for Information Integrity and the Internet" class="logo-dark">
                 <img src="images/ntu-incube-logo-light.png" alt="NTU Centre for Information Integrity and the Internet" class="logo-light">
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#stories">Stories</a></li>
-                    <li><a href="#programme">Programme</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#eligibility">Eligibility</a></li>
-                    <li><a href="2025.html" class="nav-cta">2025 Recap</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="#recap">Recap</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#voices">Voices</a></li>
+                    <li><a href="#fellows">Fellows</a></li>
+                    <li><a href="index.html" class="nav-cta">Apply for 2026</a></li>
                 </ul>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/></svg>
-                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <span class="hero-badge">Fully funded programme</span>
-        <p class="hero-eyebrow">i-SEA Fellowship 2026</p>
-        <h1>Create with<br>integrity.</h1>
-        <p class="hero-subtitle">Join 40 content creators from across Southeast Asia for a transformative journey in ethical storytelling and information integrity.</p>
+    <!-- Sub-page hero -->
+    <section class="hero subhero">
+        <span class="hero-badge">Inaugural cohort</span>
+        <p class="hero-eyebrow">i-SEA Fellowship 2025</p>
+        <h1>The year it<br>all began.</h1>
+        <p class="hero-subtitle">A look back at our inaugural cohort &mdash; 40 young content creators, three weeks of masterclasses, and one unforgettable week in Singapore.</p>
         <div class="hero-cta">
-            <a href="#apply" class="btn-primary">Apply now</a>
-            <a href="#stories" class="btn-secondary">
-                Hear from alumni
+            <a href="#fellows" class="btn-primary">Meet the 2025 fellows</a>
+            <a href="#recap" class="btn-secondary">
+                See what they did
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- Showcase Image -->
     <div class="showcase reveal-scale">
         <div class="showcase-image">
-            <img src="images/cohort-photo.jpg" alt="i-SEA Fellowship 2025 cohort" onerror="this.src='https://placehold.co/1200x600/1d1d1f/ffffff?text=i-SEA+Fellowship'">
+            <img src="images/cohort-photo.jpg" alt="The i-SEA Fellowship 2025 cohort" onerror="this.src='https://placehold.co/1200x600/1d1d1f/ffffff?text=i-SEA+2025+Cohort'">
         </div>
     </div>
 
@@ -1343,291 +1471,383 @@
                 <div class="stat-label">Countries</div>
             </div>
             <div class="stat-item reveal reveal-delay-3">
-                <div class="stat-value">100%</div>
-                <div class="stat-label">Funded</div>
+                <div class="stat-value">450+</div>
+                <div class="stat-label">Applications</div>
             </div>
             <div class="stat-item reveal reveal-delay-4">
-                <div class="stat-value">1</div>
-                <div class="stat-label">Month</div>
+                <div class="stat-value">3</div>
+                <div class="stat-label">Industry visits</div>
             </div>
         </div>
     </div>
 
-    <!-- About -->
-    <section class="section" id="about">
-        <p class="section-eyebrow reveal">About</p>
-        <h2 class="section-title reveal reveal-delay-1">What is the i-SEA Fellowship?</h2>
-        <p class="section-subtitle reveal reveal-delay-2">A hybrid month-long programme designed to equip content creators with the knowledge, skills, and tools to become ethical and impactful digital storytellers.</p>
-        <div class="section-body reveal reveal-delay-3">
-            <p>The Influence for Impact in Southeast Asia (i-SEA) Fellowship Programme is an initiative of the Centre for Information Integrity and the Internet (IN-cube) at the Wee Kim Wee School of Communication and Information, Nanyang Technological University (NTU).</p>
-            <p>We invite applications from aspiring student creators who are ready to engage in important conversations on information integrity, digital media ethics, and the power of storytelling in the age of AI.</p>
-            <p>Through online masterclasses, mentorship, and a week-long in-person workshop and hackathon in Singapore, fellows will explore key topics including:</p>
-            <div class="topics-list">
-                <span class="topic-tag">Online harms & misinformation</span>
-                <span class="topic-tag">Media law & ethics</span>
-                <span class="topic-tag">AI in storytelling</span>
-                <span class="topic-tag">Fact-checking tools</span>
-                <span class="topic-tag">Immersive journalism</span>
-                <span class="topic-tag">Hackathon challenges</span>
+    <!-- Recap intro -->
+    <section class="section" id="recap">
+        <p class="section-eyebrow reveal">The Programme</p>
+        <h2 class="section-title reveal reveal-delay-1">What happened in 2025</h2>
+        <div class="section-body reveal reveal-delay-2" style="max-width:720px;">
+            <p>The inaugural i-SEA Fellowship ran from 15 November to 12 December 2025. Drawn from more than 450 applications across Southeast Asia, 40 student content creators &mdash; half from Singapore, half from eight other countries in the region &mdash; came together for a hybrid programme on information integrity and ethical content creation.</p>
+            <p>It unfolded in three phases: three weeks of online masterclasses, a set of industry visits, and a week-long in-person workshop and hackathon in Singapore. The programme was fully funded &mdash; return flights, accommodation, meals, and a daily stipend were all covered, so fellows could focus entirely on learning and creating.</p>
+        </div>
+    </section>
+
+    <!-- Three phases -->
+    <section class="tiles-section" style="padding-top:0;">
+        <div class="tiles-grid">
+            <div class="tile phase-detail reveal reveal-delay-1">
+                <div class="tile-icon">&#128187;</div>
+                <div class="tile-meta">Phase 1 &middot; 15 Nov &ndash; 3 Dec</div>
+                <h3>Online Masterclasses</h3>
+                <p>Three weeks of evening and weekend sessions led by journalists, technology professionals, and academics &mdash; covering misinformation and deepfakes, media law and ethics, fact-checking, media literacy, and AI literacy.</p>
+            </div>
+            <div class="tile phase-detail reveal reveal-delay-2">
+                <div class="tile-icon">&#127970;</div>
+                <div class="tile-meta">Phase 2 &middot; 9 &ndash; 11 Dec</div>
+                <h3>Industry Visits</h3>
+                <p>Fellows went behind the scenes at TikTok's Transparency and Accountability Centre, SPH Media, and MediaCorp &mdash; seeing first-hand how leading platforms approach content moderation, journalism, and broadcast production.</p>
+            </div>
+            <div class="tile phase-detail reveal reveal-delay-3">
+                <div class="tile-icon">&#128640;</div>
+                <div class="tile-meta">Phase 3 &middot; 8 &ndash; 12 Dec</div>
+                <h3>Hackathon Week</h3>
+                <p>Six cross-cultural teams developed solutions to real information-integrity challenges, mentored by industry and academic experts, and pitched to a judging panel on the final day.</p>
             </div>
         </div>
     </section>
 
-    <!-- Why Apply -->
-    <section class="why-apply-section">
-        <div class="why-apply-container">
-            <p class="section-eyebrow reveal">Why Apply</p>
-            <h2 class="section-title reveal reveal-delay-1">More than a fellowship—<br>a launchpad for impact.</h2>
-            <p class="section-subtitle reveal reveal-delay-2">Elevate your skills, expand your network, and become a leader in promoting information integrity across Southeast Asia.</p>
-            <div class="why-apply-grid">
-                <div class="why-card reveal reveal-delay-1">
-                    <div class="why-card-icon">🌏</div>
-                    <h3>Regional Network</h3>
-                    <p>Join a vibrant community of passionate student creators from across Southeast Asia. Forge lasting connections, collaborate on innovative projects, and build a supportive network of peers committed to making a positive impact.</p>
-                </div>
-                <div class="why-card reveal reveal-delay-2">
-                    <div class="why-card-icon">🎓</div>
-                    <h3>Learn from Industry Leaders</h3>
-                    <p>Participate in masterclasses and workshops led by distinguished academics, top journalists, and policy experts. Dive deep into digital media ethics, AI in storytelling, and strategies to combat online harms.</p>
-                </div>
-                <div class="why-card reveal reveal-delay-3">
-                    <div class="why-card-icon">🌟</div>
-                    <h3>Creator Mentorship</h3>
-                    <p>Learn directly from established key opinion leaders and successful influencers. Gain real-world insights into building an ethical and impactful online presence from those who have paved the way.</p>
-                </div>
-                <div class="why-card reveal reveal-delay-4">
-                    <div class="why-card-icon">🏫</div>
-                    <h3>Singapore Experience</h3>
-                    <p>Immerse yourself in a week-long, fully-funded workshop and hackathon in Singapore. Your travel, accommodation, and expenses will be covered—focus entirely on learning, creating, and collaborating at NTU.</p>
+    <!-- Highlights -->
+    <section class="section" style="padding-top:0;">
+        <p class="section-eyebrow reveal">Highlights</p>
+        <h2 class="section-title reveal reveal-delay-1">Moments that stood out</h2>
+        <div class="highlight-list">
+            <div class="highlight-row reveal">
+                <div class="hl-icon">&#127908;</div>
+                <div>
+                    <h4>An opening ceremony with distinguished guests</h4>
+                    <p>The in-person week opened at the Wee Kim Wee School with addresses from Senior Parliamentary Secretary Eric Chua and Co-HASS Dean Prof. Jon Wilson, followed by keynotes from Filipino broadcast journalist Atom Araullo and Singapore science creator Kong Man Jing.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Stories -->
-    <section class="stories-section" id="stories">
-        <div class="stories-header">
-            <p class="section-eyebrow reveal">Stories</p>
-            <h2 class="section-title reveal reveal-delay-1">Voices from i-SEA 2025</h2>
-            <p class="section-subtitle reveal reveal-delay-2" style="margin: 16px auto 0;">In their own words — reflections shared by fellows from our inaugural cohort.</p>
-        </div>
-        <div class="stories-grid">
-            <div class="story-card reveal reveal-delay-1">
-                <div class="story-card-image">
-                    <img src="images/tiktok-visit.jpg" alt="TikTok visit" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=TikTok+Visit'">
-                </div>
-                <div class="story-card-content">
-                    <p class="story-quote">"The masterclasses helped me a lot. We learned how to post content on TikTok, how to grow more engagement and more viewers — very helpful for us as content creators."</p>
-                    <div class="story-author">
-                        <div class="story-author-badge">&ldquo;</div>
-                        <div>
-                            <div class="story-author-name">i-SEA 2025 Fellow</div>
-                        </div>
-                    </div>
+            <div class="highlight-row reveal">
+                <div class="hl-icon">&#127942;</div>
+                <div>
+                    <h4>Team CreatorBase wins the hackathon</h4>
+                    <p>Six teams pitched solutions to challenges in the creator economy. The winning team, CreatorBase, proposed an educational resource hub to help creators handle sponsorships transparently &mdash; praised by judges for its immediate feasibility and scalability across the region.</p>
                 </div>
             </div>
-            <div class="story-card reveal reveal-delay-2">
-                <div class="story-card-image">
-                    <img src="images/networking.jpg" alt="Networking" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=Networking'">
-                </div>
-                <div class="story-card-content">
-                    <p class="story-quote">"From the fellowship I got a lot of new knowledge — from the masterclasses and the in-person classes. The other participants are so experienced; it's fun to talk and learn new things from them."</p>
-                    <div class="story-author">
-                        <div class="story-author-badge">&ldquo;</div>
-                        <div>
-                            <div class="story-author-name">i-SEA 2025 Fellow</div>
-                        </div>
-                    </div>
+            <div class="highlight-row reveal">
+                <div class="hl-icon">&#128241;</div>
+                <div>
+                    <h4>A cohort that kept creating</h4>
+                    <p>Fellows' own posts about the programme drew more than 130,000 video views across Instagram and TikTok, and external coverage &mdash; in English, Khmer, and Vietnamese &mdash; ran 94% positive with no negative mentions.</p>
                 </div>
             </div>
-            <div class="story-card reveal reveal-delay-3">
-                <div class="story-card-image">
-                    <img src="images/closing.jpg" alt="i-SEA 2025 closing ceremony" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=Closing+Ceremony'">
-                </div>
-                <div class="story-card-content">
-                    <p class="story-quote">"My expectation was just workshops, but I didn't expect so much — the visits to TikTok and MediaCorp. To see these kinds of things in the actual place is quite cool."</p>
-                    <div class="story-author">
-                        <div class="story-author-badge">&ldquo;</div>
-                        <div>
-                            <div class="story-author-name">i-SEA 2025 Fellow</div>
-                        </div>
-                    </div>
+            <div class="highlight-row reveal">
+                <div class="hl-icon">&#127758;</div>
+                <div>
+                    <h4>A network that outlasted the programme</h4>
+                    <p>Every fellow stayed in touch with at least one other after the programme ended &mdash; many kept posting about i-SEA for months, and one credited the fellowship as a key factor in landing his dream job.</p>
                 </div>
             </div>
-            <div class="story-card reveal reveal-delay-4">
-                <div class="story-card-image">
-                    <img src="images/presentation.jpg" alt="Hackathon" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=Hackathon'">
-                </div>
-                <div class="story-card-content">
-                    <p class="story-quote">"After the masterclasses I learned a lot, especially from the fact-checkers and the professionals. I want to give back to the community in my home country with what I learned here."</p>
-                    <div class="story-author">
-                        <div class="story-author-badge">&ldquo;</div>
-                        <div>
-                            <div class="story-author-name">i-SEA 2025 Fellow</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="stories-cta">
-            <a href="2025.html" class="btn-secondary reveal">
-                Explore the full 2025 recap
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
         </div>
     </section>
 
     <!-- Full image -->
     <div class="full-image-section">
-        <img src="images/mediacorp.jpg" alt="Fellows on an industry visit to MediaCorp" onerror="this.src='https://placehold.co/1920x1080/1d1d1f/ffffff?text=Industry+Visits'">
+        <img src="images/hackathon.jpg" alt="Fellows at the i-SEA hackathon" onerror="this.src='https://placehold.co/1920x1080/1d1d1f/ffffff?text=Hackathon+Week'">
         <div class="full-image-overlay">
             <div class="full-image-overlay-content reveal-left">
-                <h2>Beyond workshops.</h2>
-                <p>Industry visits to TikTok, MediaCorp, and SPH Media give you behind-the-scenes access to how leading platforms approach information integrity.</p>
+                <h2>One week in Singapore.</h2>
+                <p>From TikTok's Transparency Centre to the hackathon stage, the in-person week turned online classmates into a regional community.</p>
             </div>
         </div>
     </div>
 
-    <!-- Programme tiles -->
-    <section class="tiles-section" id="programme">
-        <div class="tiles-header">
-            <p class="section-eyebrow reveal">Programme</p>
-            <h2 class="section-title reveal reveal-delay-1">One month. Three phases.</h2>
-        </div>
-        <div class="tiles-grid">
-            <div class="tile reveal reveal-delay-1">
-                <div class="tile-icon">💻</div>
-                <h3>Online Masterclasses</h3>
-                <p>Three weeks of sessions on misinformation, media ethics, AI literacy, and fact-checking with experts from journalism, tech, and academia.</p>
+    <!-- Outcomes / Impact -->
+    <section class="section" id="impact">
+        <p class="section-eyebrow reveal">Impact</p>
+        <h2 class="section-title reveal reveal-delay-1">What fellows carried forward</h2>
+        <p class="section-subtitle reveal reveal-delay-2">The fellowship didn't end in December. Months on, the 2025 cohort is still creating, collaborating, and leading &mdash; and that is exactly what i-SEA is built to do.</p>
+        <div class="why-apply-grid" style="margin-top:48px;">
+            <div class="why-card reveal reveal-delay-1">
+                <div class="why-card-icon">&#128736;</div>
+                <h3>Skills they use every day</h3>
+                <p>Fact-checking workflows, AI-detection tools, ethical ad disclosure, and storytelling techniques &mdash; practical skills fellows now apply to their own content.</p>
             </div>
-            <div class="tile reveal reveal-delay-2">
-                <div class="tile-icon">🏢</div>
-                <h3>Industry Visits</h3>
-                <p>Go behind the scenes at TikTok's Transparency Centre, SPH Media newsroom, and MediaCorp broadcast studios in Singapore.</p>
+            <div class="why-card reveal reveal-delay-2">
+                <div class="why-card-icon">&#127759;</div>
+                <h3>A network that stuck</h3>
+                <p>Every fellow stayed in touch with at least one other after the programme. Many still collaborate across borders on reels, campaigns, and ideas.</p>
             </div>
-            <div class="tile reveal reveal-delay-3">
-                <div class="tile-icon">🚀</div>
-                <h3>Hackathon</h3>
-                <p>Work in cross-cultural teams to develop solutions for real information integrity challenges, mentored by industry experts.</p>
+            <div class="why-card reveal reveal-delay-3">
+                <div class="why-card-icon">&#128640;</div>
+                <h3>Doors that opened</h3>
+                <p>Fellows have spoken at university workshops, switched to bilingual content for wider reach, and stepped into new roles &mdash; one credited i-SEA as a key factor in landing his dream job.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Funding -->
-    <div class="funding-banner">
-        <span class="funding-highlight reveal">$0 cost to you</span>
-        <h2 class="reveal reveal-delay-1">Fully funded.</h2>
-        <p class="reveal reveal-delay-2">Selected fellows pay nothing to participate in the programme.</p>
-        <div class="funding-items reveal reveal-delay-3">
-            <div class="funding-item">
-                <div class="funding-item-icon">✈️</div>
-                <div class="funding-item-label">Return flights</div>
-            </div>
-            <div class="funding-item">
-                <div class="funding-item-icon">🏨</div>
-                <div class="funding-item-label">6-night stay</div>
-            </div>
-            <div class="funding-item">
-                <div class="funding-item-icon">🍽️</div>
-                <div class="funding-item-label">All meals</div>
-            </div>
-            <div class="funding-item">
-                <div class="funding-item-icon">💵</div>
-                <div class="funding-item-label">Daily stipend</div>
-            </div>
-            <div class="funding-item">
-                <div class="funding-item-icon">📜</div>
-                <div class="funding-item-label">NTU certificate</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Timeline -->
-    <section class="timeline-section" id="timeline">
-        <div class="timeline-header">
-            <p class="section-eyebrow reveal" style="color: rgba(255,255,255,0.5);">Timeline</p>
-            <h2 class="section-title reveal reveal-delay-1">Key dates for 2026 (made up for change later)</h2>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item reveal">
-                <div class="timeline-content">
-                    <div class="timeline-date">July 2026</div>
-                    <div class="timeline-title">Applications open</div>
-                    <div class="timeline-desc">Submit your application through our online portal</div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-item reveal reveal-delay-1">
-                <div class="timeline-content">
-                    <div class="timeline-date">September 2026</div>
-                    <div class="timeline-title">Application deadline</div>
-                    <div class="timeline-desc">Final day for international applicants</div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-item reveal reveal-delay-2">
-                <div class="timeline-content">
-                    <div class="timeline-date">October 2026</div>
-                    <div class="timeline-title">Fellows announced</div>
-                    <div class="timeline-desc">Selected fellows notified via email</div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-item reveal reveal-delay-3">
-                <div class="timeline-content">
-                    <div class="timeline-date">November 2026</div>
-                    <div class="timeline-title">Masterclasses begin</div>
-                    <div class="timeline-desc">Three weeks of online sessions</div>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-item reveal reveal-delay-4">
-                <div class="timeline-content">
-                    <div class="timeline-date">December 2026</div>
-                    <div class="timeline-title">Singapore week</div>
-                    <div class="timeline-desc">In-person hackathon and site visits</div>
-                </div>
-                <div class="timeline-dot"></div>
+            <div class="why-card reveal reveal-delay-4">
+                <div class="why-card-icon">&#127908;</div>
+                <h3>Voices for integrity</h3>
+                <p>Fellows returned home as advocates &mdash; running their own training sessions and raising awareness of misinformation in their communities.</p>
             </div>
         </div>
     </section>
 
-    <!-- Requirements -->
-    <section class="requirements-section" id="eligibility">
-        <div class="requirements-container">
-            <p class="section-eyebrow reveal">Eligibility</p>
-            <h2 class="section-title reveal reveal-delay-1">Who can apply</h2>
-            <div class="requirements-grid">
-                <div class="requirements-column reveal-left">
-                    <h3>Basic requirements</h3>
-                    <ul class="requirements-list">
-                        <li><strong>Age:</strong> 18 to 25 years old</li>
-                        <li><strong>Nationality:</strong> Southeast Asian citizen</li>
-                        <li><strong>Education:</strong> Currently enrolled in higher education</li>
-                        <li><strong>Endorsement:</strong> Nominated by your institution</li>
-                    </ul>
+    <!-- Voices -->
+    <section class="quotes-band" id="voices">
+        <div class="stories-header">
+            <p class="section-eyebrow reveal">Voices</p>
+            <h2 class="section-title reveal reveal-delay-1">In the fellows' words</h2>
+            <p class="section-subtitle reveal reveal-delay-2" style="margin:16px auto 0;">Reflections shared by 2025 fellows in their end-of-programme interviews.</p>
+        </div>
+        <div class="quotes-grid">
+            <div class="quote-card reveal reveal-delay-1">
+                <div class="quote-mark">&ldquo;</div>
+                <p class="quote-text">The programme exceeded my expectations. It covered everything from AI to ethics to how to create more engaging content &mdash; with really influential, credible speakers from the industry and academia.</p>
+                <p class="quote-attrib">i-SEA 2025 Fellow</p>
+            </div>
+            <div class="quote-card reveal reveal-delay-2">
+                <div class="quote-mark">&ldquo;</div>
+                <p class="quote-text">It is very useful. I learned about AI, responsibility, and ethical content creation. I want to organise training in the future to help others use AI responsibly.</p>
+                <p class="quote-attrib">i-SEA 2025 Fellow</p>
+            </div>
+            <div class="quote-card reveal reveal-delay-3">
+                <div class="quote-mark">&ldquo;</div>
+                <p class="quote-text">I find this really, really helpful, and it inspired me a lot for planning for the future. It is an unforgettable moment in my life.</p>
+                <p class="quote-attrib">i-SEA 2025 Fellow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fellows gallery -->
+    <section class="gallery-section" id="fellows">
+        <div class="gallery-container">
+            <p class="section-eyebrow reveal">The Cohort</p>
+            <h2 class="section-title reveal reveal-delay-1">Meet the 2025 fellows</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Forty student content creators from nine countries across Southeast Asia.</p>
+
+            <div class="gallery-group">
+                <h3 class="gallery-group-title reveal">International Fellows</h3>
+                <p class="gallery-group-sub reveal">20 fellows from Cambodia, Indonesia, Laos, Malaysia, Myanmar, the Philippines, Thailand, and Vietnam.</p>
+                <div class="fellows-grid">
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-01.jpg" alt="Myat Theingi" loading="lazy">
+                    <div class="fellow-name">Myat Theingi</div>
+                    <div class="fellow-country">Myanmar</div>
                 </div>
-                <div class="requirements-column reveal-right">
-                    <h3>Creator requirements</h3>
-                    <ul class="requirements-list">
-                        <li><strong>Following:</strong> 1,000+ followers on any platform</li>
-                        <li><strong>Activity:</strong> Regular monthly posting history</li>
-                        <li><strong>Platform:</strong> TikTok, Instagram, YouTube, or other</li>
-                        <li><strong>Commitment:</strong> Available for full programme</li>
-                    </ul>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-02.jpg" alt="Aung Kaung Myat" loading="lazy">
+                    <div class="fellow-name">Aung Kaung Myat</div>
+                    <div class="fellow-country">Myanmar</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-03.jpg" alt="Heang Sonita" loading="lazy">
+                    <div class="fellow-name">Heang Sonita</div>
+                    <div class="fellow-country">Cambodia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-04.jpg" alt="Ork Socheata" loading="lazy">
+                    <div class="fellow-name">Ork Socheata</div>
+                    <div class="fellow-country">Cambodia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-05.jpg" alt="Vuth Vichet" loading="lazy">
+                    <div class="fellow-name">Vuth Vichet</div>
+                    <div class="fellow-country">Cambodia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-06.jpg" alt="Cassandra Erika R. Jalandoni" loading="lazy">
+                    <div class="fellow-name">Cassandra Erika R. Jalandoni</div>
+                    <div class="fellow-country">Philippines</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-07.jpg" alt="River Aisha M. Garcia" loading="lazy">
+                    <div class="fellow-name">River Aisha M. Garcia</div>
+                    <div class="fellow-country">Philippines</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-08.jpg" alt="Daniel Alijah C. Lauchengco" loading="lazy">
+                    <div class="fellow-name">Daniel Alijah C. Lauchengco</div>
+                    <div class="fellow-country">Philippines</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-09.jpg" alt="Annabel Richard" loading="lazy">
+                    <div class="fellow-name">Annabel Richard</div>
+                    <div class="fellow-country">Indonesia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-10.jpg" alt="Harry Setya Kurnia Nugraha" loading="lazy">
+                    <div class="fellow-name">Harry Setya Kurnia Nugraha</div>
+                    <div class="fellow-country">Indonesia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-11.jpg" alt="Rizky Fahmi Hidayat" loading="lazy">
+                    <div class="fellow-name">Rizky Fahmi Hidayat</div>
+                    <div class="fellow-country">Indonesia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-12.jpg" alt="Manolattana Khongsavath" loading="lazy">
+                    <div class="fellow-name">Manolattana Khongsavath</div>
+                    <div class="fellow-country">Laos</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-13.jpg" alt="Ong Yue Lin" loading="lazy">
+                    <div class="fellow-name">Ong Yue Lin</div>
+                    <div class="fellow-country">Malaysia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-14.jpg" alt="Putri Maysara Binti Muslim" loading="lazy">
+                    <div class="fellow-name">Putri Maysara Binti Muslim</div>
+                    <div class="fellow-country">Malaysia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-15.jpg" alt="Ackarachai Jintanakarn" loading="lazy">
+                    <div class="fellow-name">Ackarachai Jintanakarn</div>
+                    <div class="fellow-country">Thailand</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-16.jpg" alt="Affan Phatthanawiwat" loading="lazy">
+                    <div class="fellow-name">Affan Phatthanawiwat</div>
+                    <div class="fellow-country">Thailand</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-17.jpg" alt="Hai Anh Nguyen" loading="lazy">
+                    <div class="fellow-name">Hai Anh Nguyen</div>
+                    <div class="fellow-country">Vietnam</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-18.jpg" alt="Thao Tran Phuong" loading="lazy">
+                    <div class="fellow-name">Thao Tran Phuong</div>
+                    <div class="fellow-country">Vietnam</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-19.jpg" alt="Trinh Phuong Nam" loading="lazy">
+                    <div class="fellow-name">Trinh Phuong Nam</div>
+                    <div class="fellow-country">Vietnam</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/intl-20.jpg" alt="Pavina Vongsakda" loading="lazy">
+                    <div class="fellow-name">Pavina Vongsakda</div>
+                    <div class="fellow-country">Laos</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <h3 class="gallery-group-title reveal">Singapore Fellows</h3>
+                <p class="gallery-group-sub reveal">20 fellows from Singapore Polytechnic, Ngee Ann Polytechnic, and Nanyang Technological University.</p>
+                <div class="fellows-grid">
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-01.jpg" alt="Vernette Law Yu Xuan" loading="lazy">
+                    <div class="fellow-name">Vernette Law Yu Xuan</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-02.jpg" alt="Kate Tan Zhuo Ling" loading="lazy">
+                    <div class="fellow-name">Kate Tan Zhuo Ling</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-03.jpg" alt="Teoh Hong Han" loading="lazy">
+                    <div class="fellow-name">Teoh Hong Han</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-04.jpg" alt="Chan Yu Jie Keithen" loading="lazy">
+                    <div class="fellow-name">Chan Yu Jie Keithen</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-05.jpg" alt="Megen Ang" loading="lazy">
+                    <div class="fellow-name">Megen Ang</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-06.jpg" alt="Calistia Lim" loading="lazy">
+                    <div class="fellow-name">Calistia Lim</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-07.jpg" alt="Tricia Quek Yi Tong" loading="lazy">
+                    <div class="fellow-name">Tricia Quek Yi Tong</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-08.jpg" alt="Valerie Kang Xin En" loading="lazy">
+                    <div class="fellow-name">Valerie Kang Xin En</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-09.jpg" alt="Lee Xin Ning" loading="lazy">
+                    <div class="fellow-name">Lee Xin Ning</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-10.jpg" alt="Almira Parma Tay" loading="lazy">
+                    <div class="fellow-name">Almira Parma Tay</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-11.jpg" alt="Tan Shannen" loading="lazy">
+                    <div class="fellow-name">Tan Shannen</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-12.jpg" alt="Ezekiel Tok Yu Xuan" loading="lazy">
+                    <div class="fellow-name">Ezekiel Tok Yu Xuan</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-13.jpg" alt="Liew Yi Xuan" loading="lazy">
+                    <div class="fellow-name">Liew Yi Xuan</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-14.jpg" alt="Zachary Lim Jun Peng" loading="lazy">
+                    <div class="fellow-name">Zachary Lim Jun Peng</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-15.jpg" alt="Foo Yan Ning" loading="lazy">
+                    <div class="fellow-name">Foo Yan Ning</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-16.jpg" alt="Teo Zi Yu, Portia" loading="lazy">
+                    <div class="fellow-name">Teo Zi Yu, Portia</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-17.jpg" alt="Tanya Shroff" loading="lazy">
+                    <div class="fellow-name">Tanya Shroff</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-18.jpg" alt="Jermaine Yeo Jia Min" loading="lazy">
+                    <div class="fellow-name">Jermaine Yeo Jia Min</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-19.jpg" alt="Janelle Wong Jia Yi" loading="lazy">
+                    <div class="fellow-name">Janelle Wong Jia Yi</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows/local-20.jpg" alt="Tan Xin Wei Chloe" loading="lazy">
+                    <div class="fellow-name">Tan Xin Wei Chloe</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section" id="apply">
-        <h2 class="reveal">Ready to apply?</h2>
-        <p class="reveal reveal-delay-1">Applications for the 2026 fellowship are now open.</p>
-        <a href="#" class="btn-primary reveal reveal-delay-2" id="apply-btn">Start your application</a>
+    <section class="cta-section">
+        <h2>The 2026 cohort is next.</h2>
+        <p>Applications for the i-SEA Fellowship 2026 are now open.</p>
+        <a href="index.html#apply" class="btn-primary">Apply for 2026</a>
     </section>
 
-    <!-- Footer - NTU Style -->
+    <!-- Footer -->
     <footer>
         <div class="footer-main">
             <div class="footer-address">
@@ -1639,10 +1859,10 @@
                 </p>
                 <div class="footer-social">
                     <a href="https://www.facebook.com/NTUsg" target="_blank" aria-label="Facebook">f</a>
-                    <a href="https://www.instagram.com/naborhood_ntu" target="_blank" aria-label="Instagram">📷</a>
+                    <a href="https://www.instagram.com/naborhood_ntu" target="_blank" aria-label="Instagram">&#128247;</a>
                     <a href="https://www.linkedin.com/school/nanyang-technological-university" target="_blank" aria-label="LinkedIn">in</a>
-                    <a href="https://www.youtube.com/user/NTUsg" target="_blank" aria-label="YouTube">▶</a>
-                    <a href="https://www.tiktok.com/@naborhood_ntu" target="_blank" aria-label="TikTok">♪</a>
+                    <a href="https://www.youtube.com/user/NTUsg" target="_blank" aria-label="YouTube">&#9654;</a>
+                    <a href="https://www.tiktok.com/@naborhood_ntu" target="_blank" aria-label="TikTok">&#9834;</a>
                 </div>
             </div>
             <div class="footer-links">
@@ -1657,10 +1877,10 @@
             <div class="footer-links">
                 <h4>i-SEA Fellowship</h4>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#programme">Programme</a></li>
-                    <li><a href="#eligibility">Eligibility</a></li>
-                    <li><a href="#apply">Apply</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#programme">Programme</a></li>
+                    <li><a href="index.html#eligibility">Eligibility</a></li>
+                    <li><a href="2025.html">2025 Recap</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -1673,7 +1893,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Nanyang Technological University, Singapore</p>
+            <p>&copy; 2026 Nanyang Technological University, Singapore</p>
             <a href="https://www.ntu.edu.sg/legal" target="_blank">Legal</a>
             <a href="https://www.ntu.edu.sg/privacy" target="_blank">Privacy</a>
             <a href="https://www.ntu.edu.sg/data-protection" target="_blank">Data Protection</a>
@@ -1681,47 +1901,31 @@
     </footer>
 
     <script>
-        // Smooth scroll
+        // Smooth scroll for same-page anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Parallax on scroll for full image section - disabled for now
-        // to prevent image misalignment
-
-        // Scroll Reveal Animation
+        // Scroll reveal
         const revealElements = document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right');
-
         const revealOnScroll = () => {
             const windowHeight = window.innerHeight;
             const revealPoint = 120;
-
             revealElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-
-                if (elementTop < windowHeight - revealPoint) {
+                if (element.getBoundingClientRect().top < windowHeight - revealPoint) {
                     element.classList.add('visible');
                 }
             });
         };
-
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
-
-        // Initial check
         revealOnScroll();
-
-        // Theme is set to light mode by default via HTML attribute
-        // Dark mode toggle is hidden, so no JavaScript needed for theme switching
     </script>
 </body>
 </html>
