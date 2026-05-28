@@ -128,49 +128,27 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            color: var(--text-primary);
         }
 
-        .nav-logo img {
-            height: 44px;
-            width: auto;
+        .nav-logo-text {
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: -0.005em;
         }
 
-        .nav-logo .logo-light {
-            display: none;
+        .nav-logo-text strong {
+            font-weight: 600;
         }
 
-        .nav-logo .logo-dark {
-            display: block;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .nav-logo .logo-light {
-                display: block;
-            }
-            .nav-logo .logo-dark {
-                display: none;
-            }
-        }
-
-        [data-theme="dark"] .nav-logo .logo-light {
-            display: block;
-        }
-
-        [data-theme="dark"] .nav-logo .logo-dark {
-            display: none;
-        }
-
-        [data-theme="light"] .nav-logo .logo-light {
-            display: none;
-        }
-
-        [data-theme="light"] .nav-logo .logo-dark {
-            display: block;
+        .nav-logo-text .nav-logo-sep {
+            color: var(--text-secondary);
+            margin: 0 6px;
         }
 
         @media (max-width: 768px) {
-            .nav-logo img {
-                height: 32px;
+            .nav-logo-text {
+                font-size: 14px;
             }
         }
 
@@ -1075,7 +1053,7 @@
             background: rgba(255,255,255,0.9);
         }
 
-        /* Footer - NTU Style */
+        /* Footer */
         footer {
             background: #1a1a2e;
             color: #ffffff;
@@ -1087,7 +1065,7 @@
             margin: 0 auto;
             padding: 48px 24px;
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr;
             gap: 40px;
         }
 
@@ -1428,9 +1406,8 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/ntu-incube-logo-dark.png" alt="NTU Centre for Information Integrity and the Internet" class="logo-dark">
-                <img src="images/ntu-incube-logo-light.png" alt="NTU Centre for Information Integrity and the Internet" class="logo-light">
+            <a href="index.html" class="nav-logo" aria-label="IN-cube and WKWSCI">
+                <span class="nav-logo-text"><strong>IN-cube</strong><span class="nav-logo-sep">·</span>WKWSCI</span>
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
@@ -1463,7 +1440,7 @@
     <!-- Showcase Image -->
     <div class="showcase reveal-scale">
         <div class="showcase-image">
-            <img src="images/cohort-photo.jpg" alt="The i-SEA Fellowship 2025 cohort" onerror="this.src='https://placehold.co/1200x600/1d1d1f/ffffff?text=i-SEA+2025+Cohort'">
+            <img src="images/tiktok-hq.jpg" alt="i-SEA Fellowship 2025 fellows at the TikTok Singapore industry visit" onerror="this.src='https://placehold.co/1200x600/1d1d1f/ffffff?text=i-SEA+2025'">
         </div>
     </div>
 
@@ -1741,7 +1718,7 @@
 
             <div class="gallery-group">
                 <h3 class="gallery-group-title reveal">Singapore Fellows</h3>
-                <p class="gallery-group-sub reveal">20 fellows from Singapore Polytechnic, Ngee Ann Polytechnic, and Nanyang Technological University.</p>
+                <p class="gallery-group-sub reveal">20 Singapore-based fellows from local polytechnics and universities.</p>
                 <div class="fellows-grid">
                 <div class="fellow-card reveal">
                     <img class="fellow-photo" src="images/fellows/local-01.jpg" alt="Vernette Law Yu Xuan" loading="lazy">
@@ -1859,33 +1836,13 @@
     <footer>
         <div class="footer-main">
             <div class="footer-address">
-                <h4>Nanyang Technological University</h4>
-                <p>
-                    50 Nanyang Avenue<br>
-                    Singapore 639798<br>
-                    Tel: +65 6791 1744
-                </p>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/NTUsg" target="_blank" aria-label="Facebook">f</a>
-                    <a href="https://www.instagram.com/naborhood_ntu" target="_blank" aria-label="Instagram">&#128247;</a>
-                    <a href="https://www.linkedin.com/school/nanyang-technological-university" target="_blank" aria-label="LinkedIn">in</a>
-                    <a href="https://www.youtube.com/user/NTUsg" target="_blank" aria-label="YouTube">&#9654;</a>
-                    <a href="https://www.tiktok.com/@naborhood_ntu" target="_blank" aria-label="TikTok">&#9834;</a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="https://www.ntu.edu.sg/library" target="_blank">Library</a></li>
-                    <li><a href="https://www.ntu.edu.sg/about-us/campus" target="_blank">Campus Map</a></li>
-                    <li><a href="https://www.ntu.edu.sg/careers" target="_blank">Careers at NTU</a></li>
-                    <li><a href="https://www.ntu.edu.sg/directory" target="_blank">Directory</a></li>
-                </ul>
+                <h4>IN-cube &middot; WKWSCI</h4>
+                <p>The Centre for Information Integrity and the Internet at the Wee Kim Wee School of Communication and Information.</p>
             </div>
             <div class="footer-links">
                 <h4>i-SEA Fellowship</h4>
                 <ul>
-                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#about">About 2026</a></li>
                     <li><a href="index.html#programme">Programme</a></li>
                     <li><a href="index.html#eligibility">Eligibility</a></li>
                     <li><a href="2025.html">2025 Recap</a></li>
@@ -1895,16 +1852,11 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="mailto:incube@ntu.edu.sg">incube@ntu.edu.sg</a></li>
-                    <li><a href="https://www.ntu.edu.sg/incube" target="_blank">IN-cube</a></li>
-                    <li><a href="https://www.ntu.edu.sg/wkwsci" target="_blank">WKWSCI</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Nanyang Technological University, Singapore</p>
-            <a href="https://www.ntu.edu.sg/legal" target="_blank">Legal</a>
-            <a href="https://www.ntu.edu.sg/privacy" target="_blank">Privacy</a>
-            <a href="https://www.ntu.edu.sg/data-protection" target="_blank">Data Protection</a>
+            <p>&copy; 2026 i-SEA Fellowship &middot; IN-cube &middot; WKWSCI</p>
         </div>
     </footer>
 
