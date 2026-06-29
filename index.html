@@ -650,50 +650,53 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
-        .story-card-image {
-            height: 280px;
-            overflow: hidden;
-        }
-
-        .story-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 40%;
-            transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-
-        .story-card:hover .story-card-image img {
-            transform: scale(1.05);
-        }
-
         .story-card-content {
-            padding: 32px;
+            padding: 44px 40px 36px;
             flex: 1;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
-
+        .story-card-content::before {
+            content: "\201C";
+            position: absolute;
+            top: 24px;
+            left: 36px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 92px;
+            line-height: 0.6;
+            color: #0d7a4a;
+            opacity: 0.18;
+            pointer-events: none;
+        }
         .story-quote {
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: -0.02em;
-            line-height: 1.35;
-            margin-bottom: 24px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            font-size: 19px;
+            font-weight: 400;
+            letter-spacing: -0.005em;
+            line-height: 1.55;
+            margin-top: 36px;
+            margin-bottom: 32px;
+            color: var(--text-primary);
             flex: 1;
         }
+        .story-quote::before { content: ""; }
 
         .story-author {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
         }
 
         .story-author-avatar {
-            width: 44px;
-            height: 44px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             object-fit: cover;
+            flex: 0 0 auto;
         }
 
         .story-author-badge {
@@ -713,8 +716,18 @@
         }
 
         .story-author-name {
-            font-size: 14px;
+            font-size: 15.5px;
             font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+        .story-author-detail {
+            font-size: 11.5px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-top: 4px;
         }
 
         .story-author-detail {
@@ -1396,9 +1409,6 @@
         </div>
         <div class="stories-grid">
             <div class="story-card reveal reveal-delay-1">
-                <div class="story-card-image">
-                    <img src="images/tiktok-visit.jpg" alt="TikTok visit" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=TikTok+Visit'">
-                </div>
                 <div class="story-card-content">
                     <p class="story-quote">"Being part of the i-SEA Fellowship 2025 was an unforgettable experience. I had the chance to learn from inspiring creators across Southeast Asia, exchange ideas, and grow both personally and professionally. Beyond the workshops and discussions, I built meaningful friendships and connections that continue to inspire me as a content creator and youth advocate."</p>
                     <div class="story-author">
@@ -1411,9 +1421,6 @@
                 </div>
             </div>
             <div class="story-card reveal reveal-delay-2">
-                <div class="story-card-image">
-                    <img src="images/networking.jpg" alt="Networking" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=Networking'">
-                </div>
                 <div class="story-card-content">
                     <p class="story-quote">"Participating in the first-ever i-SEA Fellowship at NTU Singapore was a truly meaningful experience that broadened my perspective and strengthened my skills. The programme deepened my understanding of information integrity, digital literacy and responsible AI while allowing me to collaborate with passionate young leaders from across Southeast Asia. Beyond the energy of the hackathon, what stood out most was the strong regional network we built — those connections continue to spark collaborations, community initiatives and advocacy efforts that create lasting impact."</p>
                     <div class="story-author">
@@ -1426,9 +1433,6 @@
                 </div>
             </div>
             <div class="story-card reveal reveal-delay-3">
-                <div class="story-card-image">
-                    <img src="images/closing.jpg" alt="i-SEA 2025 closing ceremony" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=Closing+Ceremony'">
-                </div>
                 <div class="story-card-content">
                     <p class="story-quote">"For me, i-SEA was more than a fellowship. It was a turning point. As a student and content creator, I discovered new ways to connect digital literacy, information integrity, and ethical, responsible AI with education. The experience challenged me to think beyond borders and inspired me to create meaningful content that empowers young people to think critically and navigate the digital world responsibly. I proudly carry the nickname 'Visionary Vichet' — a reminder to keep learning, creating, and inspiring positive change in my community."</p>
                     <div class="story-author">
@@ -1441,9 +1445,6 @@
                 </div>
             </div>
             <div class="story-card reveal reveal-delay-4">
-                <div class="story-card-image">
-                    <img src="images/presentation.jpg" alt="Hackathon" onerror="this.src='https://placehold.co/600x280/1d1d1f/ffffff?text=Hackathon'">
-                </div>
                 <div class="story-card-content">
                     <p class="story-quote">"Grand, radiant, significant, and rare. Bold, unforgettable, beyond compare. To sum it up: absolute PEAK. Thank you, i-SEA, for the greatest experience I've ever had."</p>
                     <div class="story-author">
