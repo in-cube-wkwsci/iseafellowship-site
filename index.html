@@ -983,12 +983,26 @@
 
         /* Funding banner */
         /* Temasek Foundation logo — inside footer Contact column */
-        .footer-tf-logo-wrap {
+        .footer-tf-cofunded-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+        .footer-tf-logo-link {
             display: inline-block;
             background: #ffffff;
             padding: 12px 16px;
             border-radius: 6px;
-            margin-top: 18px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .footer-tf-logo-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
         }
         .footer-tf-logo {
             height: 32px;
@@ -1527,6 +1541,18 @@
                     </div>
                 </div>
             </div>
+            <div class="story-card reveal reveal-delay-1">
+                <div class="story-card-content">
+                    <p class="story-quote">"Before I attended i-SEA Fellowship at NTU Singapore, I thought creating was about producing good content. After i-SEA, I realised it's about creating impact. Meeting passionate young people from different backgrounds reminded me that every story deserves to be heard. This experience strengthened my purpose as a student creator and inspired me to use my voice more intentionally. Thank you for creating a space where ideas became friendships, strangers became family, and young creators were encouraged to believe that what we create can leave a lasting impact! 🫶✨"</p>
+                    <div class="story-author">
+                        <img class="story-author-avatar" src="images/fellows/intl-14.jpg" alt="Putri Maysara">
+                        <div>
+                            <div class="story-author-name">Putri Maysara 🇲🇾</div>
+                            <div class="story-author-detail">i-SEA 2025 Fellow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="stories-cta">
             <a href="2025.html" class="btn-secondary reveal">
@@ -1715,9 +1741,10 @@
                 <ul>
                     <li><a href="mailto:incube@ntu.edu.sg">incube@ntu.edu.sg</a></li>
                 </ul>
-                <div class="footer-tf-logo-wrap">
+                <span class="footer-tf-cofunded-label">Co-Funded by</span>
+                <a class="footer-tf-logo-link" href="https://www.temasekfoundation.org.sg/" target="_blank" rel="noopener" aria-label="Temasek Foundation (opens in a new tab)">
                     <img class="footer-tf-logo" src="images/temasek-foundation.png" alt="Temasek Foundation">
-                </div>
+                </a>
             </div>
         </div>
         <div class="footer-bottom">
