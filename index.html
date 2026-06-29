@@ -982,26 +982,20 @@
         }
 
         /* Funding banner */
-        /* Funded-by section (just above footer) */
-        .funded-by {
+        /* Temasek Foundation logo — inside footer Contact column */
+        .footer-tf-logo-wrap {
+            display: inline-block;
             background: #ffffff;
-            padding: 56px 24px;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            text-align: center;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-top: 18px;
         }
-        .funded-by-inner {
-            display: inline-flex; flex-direction: column; align-items: center;
+        .footer-tf-logo {
+            height: 32px;
+            width: auto;
+            display: block;
         }
-        .funded-by-label {
-            font-size: 11px; font-weight: 700;
-            letter-spacing: 0.4em; text-transform: uppercase;
-            color: var(--text-secondary);
-            margin-bottom: 22px;
-        }
-        .funded-by-logo {
-            height: 76px; width: auto; display: block;
-        }
+
         /* Footer About IN-cube */
         .footer-address p strong { color: #ffffff; font-weight: 600; }
         .footer-about-link { margin-top: 14px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
@@ -1699,15 +1693,6 @@
         <a href="https://ntusingapore.qualtrics.com/jfe/form/SV_2nKLEr2lkZ76hSK" class="btn-primary reveal reveal-delay-2" id="apply-btn" target="_blank" rel="noopener">Start your application</a>
     </section>
 
-
-    <!-- Funded by (Temasek Foundation) -->
-    <section class="funded-by">
-        <div class="funded-by-inner">
-            <p class="funded-by-label">Funded by</p>
-            <img class="funded-by-logo" src="images/temasek-foundation.png" alt="Temasek Foundation">
-        </div>
-    </section>
-    
     <!-- Footer -->
     <footer>
         <div class="footer-main">
@@ -1730,6 +1715,9 @@
                 <ul>
                     <li><a href="mailto:incube@ntu.edu.sg">incube@ntu.edu.sg</a></li>
                 </ul>
+                <div class="footer-tf-logo-wrap">
+                    <img class="footer-tf-logo" src="images/temasek-foundation.png" alt="Temasek Foundation">
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
