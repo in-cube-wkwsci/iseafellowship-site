@@ -1430,6 +1430,25 @@
                 text-align: center;
             }
         }
+        /* fellows gallery — 2026 cohort */
+        .gallery-section { padding: 120px 24px; background: var(--bg-white); }
+        .gallery-container { max-width: 1200px; margin: 0 auto; }
+        .gallery-group { margin-top: 72px; }
+        .gallery-group:first-of-type { margin-top: 56px; }
+        .gallery-group-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
+        .gallery-group-sub { font-size: 15px; color: var(--text-secondary); margin-top: 6px; margin-bottom: 32px; }
+        .fellows-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; }
+        .fellow-card { text-align: center; }
+        .fellow-photo {
+            width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+            border-radius: 16px; display: block; background: var(--bg-light);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .fellow-card:hover .fellow-photo { transform: translateY(-5px); box-shadow: 0 14px 32px rgba(0,0,0,0.16); }
+        .fellow-name { font-size: 15px; font-weight: 600; margin-top: 14px; }
+        .fellow-country { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+        @media (max-width: 1024px) { .fellows-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .fellows-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
     </style>
 </head>
 <body>
@@ -1442,10 +1461,10 @@
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#fellows">Fellows</a></li>
                     <li><a href="#programme">Programme</a></li>
                     <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#stories">Stories</a></li>
                     <li><a href="2025.html" class="nav-cta">2025 Recap</a></li>
                 </ul>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -1458,14 +1477,14 @@
 
     <!-- Hero -->
     <section class="hero">
-        <span class="hero-badge">Applications closed · Thank you</span>
+        <span class="hero-badge">2026 cohort announced</span>
         <p class="hero-eyebrow">i-SEA Fellowship 2026</p>
         <h1>Create with<br>integrity.</h1>
-        <p class="hero-subtitle">We received <strong>over 4,300 applications</strong> from creators across the region. Thank you to everyone who applied — selected fellows will be announced soon.</p>
+        <p class="hero-subtitle">36 student content creators from 13 countries across Southeast Asia, China, and India. The 2026 programme begins <strong>9 November</strong>, with the in-person hackathon week in Singapore from <strong>7–12 December</strong>.</p>
         <div class="hero-cta">
-            <a href="#stories" class="btn-primary">Hear from 2025 alumni</a>
-            <a href="#eligibility" class="btn-secondary">
-                About the 2026 programme
+            <a href="#fellows" class="btn-primary">Meet the 2026 fellows</a>
+            <a href="#timeline" class="btn-secondary">
+                Programme schedule
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
         </div>
@@ -1485,11 +1504,11 @@
     <div class="stats-ribbon">
         <div class="stats-container">
             <div class="stat-item reveal reveal-delay-1">
-                <div class="stat-value">40</div>
+                <div class="stat-value">36</div>
                 <div class="stat-label">Fellows</div>
             </div>
             <div class="stat-item reveal reveal-delay-2">
-                <div class="stat-value">9</div>
+                <div class="stat-value">13</div>
                 <div class="stat-label">Countries</div>
             </div>
             <div class="stat-item reveal reveal-delay-3">
@@ -1519,6 +1538,209 @@
                 <span class="topic-tag">Fact-checking tools</span>
                 <span class="topic-tag">Immersive journalism</span>
                 <span class="topic-tag">Hackathon challenges</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fellows gallery -->
+    <section class="gallery-section" id="fellows">
+        <div class="gallery-container">
+            <p class="section-eyebrow reveal">The 2026 Cohort</p>
+            <h2 class="section-title reveal reveal-delay-1">Meet the 2026 fellows</h2>
+            <p class="section-subtitle reveal reveal-delay-2">36 student content creators from 13 countries across Southeast Asia, China, and India.</p>
+
+            <div class="gallery-group">
+                <h3 class="gallery-group-title reveal">International Fellows</h3>
+                <p class="gallery-group-sub reveal">26 fellows from Cambodia, China, India, Indonesia, Laos, Malaysia, Myanmar, Philippines, Thailand, Timor-Leste, and Vietnam.</p>
+                <div class="fellows-grid">
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/cambodia-chhour-kimgach.jpg" alt="CHHOUR KIMGACH" loading="lazy">
+                    <div class="fellow-name">CHHOUR KIMGACH</div>
+                    <div class="fellow-country">Cambodia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/cambodia-kim-mary-jane.jpg" alt="Kim Mary Jane" loading="lazy">
+                    <div class="fellow-name">Kim Mary Jane</div>
+                    <div class="fellow-country">Cambodia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/cambodia-sman-farany.jpg" alt="Sman Farany" loading="lazy">
+                    <div class="fellow-name">Sman Farany</div>
+                    <div class="fellow-country">Cambodia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/china-aaron-smith-eunice-onyiyechi.jpg" alt="Aaron-Smith (Eunice) Onyiyechi" loading="lazy">
+                    <div class="fellow-name">Aaron-Smith (Eunice) Onyiyechi</div>
+                    <div class="fellow-country">China</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/china-michelle-kwok.jpg" alt="MICHELLE KWOK" loading="lazy">
+                    <div class="fellow-name">MICHELLE KWOK</div>
+                    <div class="fellow-country">China</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/china-tian-xinyi.jpg" alt="Tian Xinyi" loading="lazy">
+                    <div class="fellow-name">Tian Xinyi</div>
+                    <div class="fellow-country">China</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/india-aman-semwal.jpg" alt="Aman Semwal" loading="lazy">
+                    <div class="fellow-name">Aman Semwal</div>
+                    <div class="fellow-country">India</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/india-aravind-koolagurki-thimmarayappa.jpg" alt="ARAVIND KOOLAGURKI THIMMARAYAPPA" loading="lazy">
+                    <div class="fellow-name">ARAVIND KOOLAGURKI THIMMARAYAPPA</div>
+                    <div class="fellow-country">India</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/india-pratyncha-manish-patil.jpg" alt="PRATYNCHA MANISH PATIL" loading="lazy">
+                    <div class="fellow-name">PRATYNCHA MANISH PATIL</div>
+                    <div class="fellow-country">India</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/indonesia-daniashara-dafa.jpg" alt="Daniashara Dafa" loading="lazy">
+                    <div class="fellow-name">Daniashara Dafa</div>
+                    <div class="fellow-country">Indonesia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/indonesia-fathan-wibowo.jpg" alt="FATHAN WIBOWO" loading="lazy">
+                    <div class="fellow-name">FATHAN WIBOWO</div>
+                    <div class="fellow-country">Indonesia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/indonesia-kanaya-malika-amanda.jpg" alt="Kanaya Malika Amanda" loading="lazy">
+                    <div class="fellow-name">Kanaya Malika Amanda</div>
+                    <div class="fellow-country">Indonesia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/laos-deth-ienlisak.jpg" alt="Deth IENLISAK" loading="lazy">
+                    <div class="fellow-name">Deth IENLISAK</div>
+                    <div class="fellow-country">Laos</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/laos-xaysana-phunphaengdy.jpg" alt="Xaysana Phunphaengdy" loading="lazy">
+                    <div class="fellow-name">Xaysana Phunphaengdy</div>
+                    <div class="fellow-country">Laos</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/malaysia-sim-en-yee.jpg" alt="Sim En Yee" loading="lazy">
+                    <div class="fellow-name">Sim En Yee</div>
+                    <div class="fellow-country">Malaysia</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/myanmar-hsu-yadanar-htet.jpg" alt="Hsu Yadanar Htet" loading="lazy">
+                    <div class="fellow-name">Hsu Yadanar Htet</div>
+                    <div class="fellow-country">Myanmar</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/myanmar-shine-min-htet.jpg" alt="Shine Min Htet" loading="lazy">
+                    <div class="fellow-name">Shine Min Htet</div>
+                    <div class="fellow-country">Myanmar</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/philippines-eloisa-claire-t-sicat.jpg" alt="ELOISA CLAIRE T SICAT" loading="lazy">
+                    <div class="fellow-name">ELOISA CLAIRE T SICAT</div>
+                    <div class="fellow-country">Philippines</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/philippines-jibril-vin-dominiq-c-bugtong.jpg" alt="Jibril Vin Dominiq C. Bugtong" loading="lazy">
+                    <div class="fellow-name">Jibril Vin Dominiq C. Bugtong</div>
+                    <div class="fellow-country">Philippines</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/philippines-summer-polynne-hernandez-magallanes.jpg" alt="Summer Polynne Hernandez Magallanes" loading="lazy">
+                    <div class="fellow-name">Summer Polynne Hernandez Magallanes</div>
+                    <div class="fellow-country">Philippines</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/thailand-arinchaya-sukprasert.jpg" alt="Arinchaya Sukprasert" loading="lazy">
+                    <div class="fellow-name">Arinchaya Sukprasert</div>
+                    <div class="fellow-country">Thailand</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/thailand-sipang-sibunruang.jpg" alt="Sipang Sibunruang" loading="lazy">
+                    <div class="fellow-name">Sipang Sibunruang</div>
+                    <div class="fellow-country">Thailand</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/timor-leste-carlos-donato-almeida.jpg" alt="Carlos Donato Almeida" loading="lazy">
+                    <div class="fellow-name">Carlos Donato Almeida</div>
+                    <div class="fellow-country">Timor-Leste</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/vietnam-bui-khanh-chi.jpg" alt="BUI KHANH CHI" loading="lazy">
+                    <div class="fellow-name">BUI KHANH CHI</div>
+                    <div class="fellow-country">Vietnam</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/vietnam-dang-thanh-nga-gem.jpg" alt="DANG THANH NGA (GEM)" loading="lazy">
+                    <div class="fellow-name">DANG THANH NGA (GEM)</div>
+                    <div class="fellow-country">Vietnam</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/vietnam-nguyen-nang-thuy-nguyen.jpg" alt="NGUYEN NANG THUY NGUYEN" loading="lazy">
+                    <div class="fellow-name">NGUYEN NANG THUY NGUYEN</div>
+                    <div class="fellow-country">Vietnam</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <h3 class="gallery-group-title reveal">Singapore Fellows</h3>
+                <p class="gallery-group-sub reveal">10 Singapore-based fellows from local junior colleges, polytechnics, and universities.</p>
+                <div class="fellows-grid">
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-angeline-heng-li-ling.jpg" alt="Angeline Heng Li Ling" loading="lazy">
+                    <div class="fellow-name">Angeline Heng Li Ling</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-darakarn-limkool.jpg" alt="Darakarn Limkool" loading="lazy">
+                    <div class="fellow-name">Darakarn Limkool</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-ho-rui-wen-elicia.jpg" alt="Ho Rui Wen Elicia" loading="lazy">
+                    <div class="fellow-name">Ho Rui Wen Elicia</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-jacinta-saw-weiqi.jpg" alt="JACINTA SAW WEIQI" loading="lazy">
+                    <div class="fellow-name">JACINTA SAW WEIQI</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-jesslyn-tan-xiao-xuan.jpg" alt="Jesslyn Tan Xiao Xuan" loading="lazy">
+                    <div class="fellow-name">Jesslyn Tan Xiao Xuan</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-liu-huixuan.jpg" alt="Liu Huixuan" loading="lazy">
+                    <div class="fellow-name">Liu Huixuan</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-nathalvyn-kurniadi.jpg" alt="Nathalvyn Kurniadi" loading="lazy">
+                    <div class="fellow-name">Nathalvyn Kurniadi</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-shen-xinyi.jpg" alt="Shen Xinyi" loading="lazy">
+                    <div class="fellow-name">Shen Xinyi</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-stella-xu-ling-en.jpg" alt="Stella Xu Ling'En" loading="lazy">
+                    <div class="fellow-name">Stella Xu Ling'En</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                <div class="fellow-card reveal">
+                    <img class="fellow-photo" src="images/fellows_2026/singapore-tan-yi-xuan-chloe.jpg" alt="TAN YI XUAN, CHLOE" loading="lazy">
+                    <div class="fellow-name">TAN YI XUAN, CHLOE</div>
+                    <div class="fellow-country">Singapore</div>
+                </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1768,12 +1990,8 @@
 
     <!-- CTA -->
     <section class="cta-section" id="apply">
-        <h2 class="reveal">Thank you.</h2>
-        <p class="reveal reveal-delay-1">Applications for the 2026 fellowship are now closed. We received <strong>over 4,300 applications</strong> from students across Southeast Asia, China and India — thank you to everyone who applied and to the mentors, universities and referees who supported them.</p>
-        <p class="reveal reveal-delay-2" style="margin-top:1rem;">We're reviewing every application carefully. The selected fellows will be announced soon.</p>
-        <p class="cta-scam-notice reveal reveal-delay-3">
-            <strong>A reminder:</strong> i-SEA, IN-cube and NTU will never ask applicants to pay a registration fee, processing fee, deposit, or interview fee. If anyone claims to be collecting money on our behalf, do not transfer anything — write to <a href="mailto:incube@ntu.edu.sg">incube@ntu.edu.sg</a> to verify.
-        </p>
+        <h2 class="reveal">The 2026 programme begins 9 November.</h2>
+        <p class="reveal reveal-delay-1">Three weeks of online masterclasses followed by a week-long in-person hackathon in Singapore. Follow the cohort's journey here through December, and reach us at <a href="mailto:incube@ntu.edu.sg">incube@ntu.edu.sg</a> for partnership, mentorship, and media enquiries.</p>
     </section>
 
     <!-- Footer -->
