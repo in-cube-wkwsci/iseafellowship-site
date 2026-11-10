@@ -1040,6 +1040,17 @@
         }
 
         /* Funding banner */
+        /* Keynote speakers */
+        .speakers-section { padding: 110px 24px; background: var(--bg-light); }
+        .speakers-header { max-width: 980px; margin: 0 auto 56px; text-align: center; }
+        .speakers-grid { max-width: 820px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        .speaker-card { background: var(--card-bg); border-radius: 18px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .speaker-photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #fff; }
+        .speaker-body { padding: 22px 24px 26px; }
+        .speaker-name { font-size: 21px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 6px; }
+        .speaker-role { font-size: 15px; line-height: 1.45; color: var(--text-secondary); }
+        @media (max-width: 768px) { .speakers-grid { grid-template-columns: 1fr; max-width: 380px; } .speakers-section { padding: 80px 20px; } }
+
         /* Temasek Foundation logo — inside footer Contact column */
         .footer-tf-cofunded-label {
             display: block;
@@ -1873,6 +1884,30 @@
                 <img class="tile-photo" src="images/hackathon.jpg" alt="i-SEA hackathon">
                 <h3>Hackathon</h3>
                 <p>Work in cross-cultural teams to develop solutions for real information integrity challenges, mentored by industry experts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="speakers-section" id="speakers">
+        <div class="speakers-header">
+            <p class="section-eyebrow reveal">Keynote speakers</p>
+            <h2 class="section-title reveal reveal-delay-1">Meet our 2026 keynote speakers.</h2>
+            <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto;">Opening the Singapore week on 7 December 2026.</p>
+        </div>
+        <div class="speakers-grid">
+            <div class="speaker-card reveal reveal-delay-1">
+                <img class="speaker-photo" src="images/speaker-kong-manjing.jpg" alt="Kong Manjing" loading="lazy">
+                <div class="speaker-body">
+                    <div class="speaker-name">Kong Manjing</div>
+                    <div class="speaker-role">Influencer<br>Co-founder of JustkeepThinking</div>
+                </div>
+            </div>
+            <div class="speaker-card reveal reveal-delay-2">
+                <img class="speaker-photo" src="images/speaker-daniel-woodroof.jpg" alt="Daniel Woodroof" loading="lazy">
+                <div class="speaker-body">
+                    <div class="speaker-name">Daniel Woodroof</div>
+                    <div class="speaker-role">Former Professional Racecar Driver<br>Co-founder of Pandan Social</div>
+                </div>
             </div>
         </div>
     </section>
